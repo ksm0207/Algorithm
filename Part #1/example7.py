@@ -11,3 +11,4 @@ number = int(input("값 입력 :  "))
 for x in range(1, 10):
     print(f" {number} x {x} = {number * x}")
 
+
