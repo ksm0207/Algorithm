@@ -12,22 +12,27 @@
 #
 # 출력
 # 상근이가 배달하는 봉지의 최소 개수를 출력한다. 만약, 정확하게 N킬로그램을 만들 수 없다면 -1을 출력한다.
-
+w_count = 0
+suggar = 0
 suggar03 = 3
 suggar05 = 5
-suggar = 0
-ceo = int(input("설탕 Kg 입력 : "))
-print(f"사장님: 오늘은 {ceo} Kg 만큼 배달 해야 합니다 !!")
-print("상근 : 아 귀찮아 .. 효율적인 방법이 없을까 ? ", "설탕봉지 무게량", suggar03, "Kg", suggar05, "Kg")
+num = int(input("설탕 Kg 입력 : "))
+print(f"사장님: 오늘은 {num} Kg 만큼 배달 해야 합니다 !!")
+print("상근 : 설탕봉지 무게량", suggar03, "Kg", suggar05, "Kg")
 while True:
-    if ceo % 5 == 0:  # 18 / 5 == 0 으로 떨어질때
-        suggar += 1
-        suggar = suggar + (ceo // suggar05)  # 1 + (3)
-        print(suggar)
-        break
-    ceo = ceo - suggar03
-    print("Ceo = ", ceo)
+    suggar += 1
+    w_count += 1
+    print("suggar = ", suggar)
+    num = num - suggar03
+    print(f"num - suggar03 = {num}")
+    print(f"=======While 문 {w_count}번 실행 ========")
 
-    if ceo < 0:
-        print(-1)
+    if num % suggar05 == 0:  # num / 5 == 0 으로 떨어질때
+        print("num = ", num)
+        suggar = suggar + (num // suggar05)  # 1 + ()
+        print("Result = ", suggar)
         break
+    else:
+        if num < 0:
+            print(-1)
+            break
