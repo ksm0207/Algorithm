@@ -15,7 +15,7 @@
 
 
 num = int(input("서로 다른 자연수를 N만큼 입력하세요 : "))
-max_value = []
+input_list = []
 
 
 def find_max_value():
@@ -24,11 +24,12 @@ def find_max_value():
     print("=" * 5)
     for i in range(num):
         value = int(input())
-        max_value.append(value)
+        input_list.append(value)
     print("=" * 5)
 
-    print(f"최대값= {max(max_value)} / 위치= {max_value.index(max(max_value))+1} 번째에 있습니다 ")
+    print(
+        f"최대값= {max(input_list)} / 위치= {input_list.index(max(input_list))+1} 번째에 있습니다 "
+    )
 
 
 find_max_value()
-
