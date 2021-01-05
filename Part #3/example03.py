@@ -21,9 +21,7 @@ def average():
         count = 0
 
         for j in student_list[1:]:
-            print("J = ", j)
             if j > avg_result:  # j > 70 up .. count+=1
-                print("AVG", avg_result)
                 count += 1  # 2
         print("%.3f" % round(count / student_list[0] * 100, 3), "%")
 
